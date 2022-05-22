@@ -1,6 +1,6 @@
 # APPEKS
-aplikasi pemebelajaran proses komunikasi sistem <br>
-<b>Kelompok Wireless Commuunication</b>
+<h2><b>Aplikasi Pemebelajaran Proses Komunikasi Sistem</b></h2> <br>
+<h3><b>Kelompok Wireless Commuunication</b></h3>
 <ul>
   <li><b>Package Assets:</b> digunakan untuk menyimpan conponent UI design</li>
   <li><b>Package Config:</b> digunakan untuk mentimpan configurasi database</li>
