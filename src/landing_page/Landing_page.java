@@ -34,6 +34,7 @@ public class Landing_page extends javax.swing.JFrame {
         Button_buka = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("APPEKS");
 
         Button_buka.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/button_buka.png"))); // NOI18N
         Button_buka.setToolTipText("");
