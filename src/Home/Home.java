@@ -36,7 +36,7 @@ public class Home extends javax.swing.JFrame {
         txt_visualisasi = new javax.swing.JLabel();
         panel_about = new javax.swing.JPanel();
         txt_about = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel2 = new panelGambar();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txt_mulai_visualisasi = new javax.swing.JButton();
