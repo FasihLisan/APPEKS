@@ -8,3 +8,4 @@
   <li><b>Stiap halaman di buat per package tersendiri!!</b></li>
 </ul>
 <a href="https://imgur.com/hbzAFBt"><img src="https://i.imgur.com/hbzAFBt.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/W9C6efS"><img src="https://i.imgur.com/W9C6efS.png" title="source: imgur.com" /></a>
