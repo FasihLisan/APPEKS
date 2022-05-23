@@ -42,6 +42,12 @@ public class Landing_page extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Button_bukaMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                Button_bukaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                Button_bukaMouseExited(evt);
+            }
         });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -82,6 +88,14 @@ public class Landing_page extends javax.swing.JFrame {
         hm.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_Button_bukaMouseClicked
+
+    private void Button_bukaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_bukaMouseEntered
+        Button_buka.setSize(249, 100);
+    }//GEN-LAST:event_Button_bukaMouseEntered
+
+    private void Button_bukaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_bukaMouseExited
+        Button_buka.setSize(249, 90);
+    }//GEN-LAST:event_Button_bukaMouseExited
 
     /**
      * @param args the command line arguments

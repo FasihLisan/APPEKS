@@ -38,7 +38,8 @@ public class Home extends javax.swing.JFrame {
         txt_about = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txt_mulai_visualisasi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
@@ -131,7 +132,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(panel_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(panel_about, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 776, Short.MAX_VALUE))
+                .addGap(0, 753, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,12 +142,23 @@ public class Home extends javax.swing.JFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(243, 247, 251));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 36)); // NOI18N
-        jLabel1.setText("Welcome");
+        jLabel1.setText("Welcome to APPEKS");
 
-        jLabel2.setFont(new java.awt.Font("Poppins Light", 0, 24)); // NOI18N
-        jLabel2.setText("APPEKS adalah .....");
+        jLabel3.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
+        jLabel3.setText("<html><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatem ipsa veritatis eius harum mollitia assumenda eligendi id, vitae ratione totam itaque voluptatum voluptas! Eos, soluta sed? Suscipit vero reiciendis placeat tempora ex et similique cum, quos maiores officia quod impedit enim dolorum molestiae veritatis. Quo numquam, ut esse perspiciatis distinctio recusandae error illum velit. Nesciunt obcaecati doloribus laborum vero, praesentium omnis consequatur veritatis deserunt aut eius possimus magni dignissimos facere sed laboriosam perspiciatis? Nostrum repudiandae neque tenetur culpa fugiat architecto veritatis sed maiores veniam quo, modi et mollitia aperiam itaque unde esse rerum repellat sit velit quod placeat blanditiis at dicta magnam. Vel praesentium nesciunt quam beatae est excepturi at saepe obcaecati veritatis accusantium sapiente molestiae distinctio itaque sed corrupti voluptate neque ipsum eaque magnam ullam, fugit earum? Minus corrupti aliquid totam, expedita laboriosam illo sequi quae autem beatae maxime? Libero, iste ut excepturi voluptatibus perferendis quasi nam repellendus.</p></html>");
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        txt_mulai_visualisasi.setBackground(new java.awt.Color(255, 255, 255));
+        txt_mulai_visualisasi.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_mulai_visualisasi.setText("Mulai Visualisasi");
+        txt_mulai_visualisasi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_mulai_visualisasiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -155,7 +167,8 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
+                    .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -164,9 +177,11 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addContainerGap(473, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -211,6 +226,10 @@ public class Home extends javax.swing.JFrame {
         panel_about.setBackground(null);
     }//GEN-LAST:event_panel_aboutMouseExited
 
+    private void txt_mulai_visualisasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_mulai_visualisasiActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -248,7 +267,7 @@ public class Home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel panel_about;
@@ -256,6 +275,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel panel_visualisasi;
     private javax.swing.JLabel txt_about;
     private javax.swing.JLabel txt_home;
+    private javax.swing.JButton txt_mulai_visualisasi;
     private javax.swing.JLabel txt_visualisasi;
     // End of variables declaration//GEN-END:variables
 }
