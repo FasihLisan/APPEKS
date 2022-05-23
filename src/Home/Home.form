@@ -55,7 +55,7 @@
                   <Component id="panel_visualisasi" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   <Component id="panel_about" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="776" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="753" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -183,6 +183,9 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="fb" green="f7" red="f3" type="rgb"/>
         </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
       </Properties>
 
       <Layout>
@@ -191,7 +194,8 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="txt_mulai_visualisasi" min="-2" pref="216" max="-2" attributes="0"/>
+                      <Component id="jLabel3" min="-2" pref="1193" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -203,9 +207,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="473" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" pref="261" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txt_mulai_visualisasi" min="-2" pref="58" max="-2" attributes="0"/>
+                  <EmptySpace pref="237" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -216,16 +222,31 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Poppins Medium" size="36" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Welcome"/>
+            <Property name="text" type="java.lang.String" value="Welcome to APPEKS"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Poppins Light" size="24" style="0"/>
+              <Font name="Poppins Light" size="18" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="APPEKS adalah ....."/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatem ipsa veritatis eius harum mollitia assumenda eligendi id, vitae ratione totam itaque voluptatum voluptas! Eos, soluta sed? Suscipit vero reiciendis placeat tempora ex et similique cum, quos maiores officia quod impedit enim dolorum molestiae veritatis. Quo numquam, ut esse perspiciatis distinctio recusandae error illum velit. Nesciunt obcaecati doloribus laborum vero, praesentium omnis consequatur veritatis deserunt aut eius possimus magni dignissimos facere sed laboriosam perspiciatis? Nostrum repudiandae neque tenetur culpa fugiat architecto veritatis sed maiores veniam quo, modi et mollitia aperiam itaque unde esse rerum repellat sit velit quod placeat blanditiis at dicta magnam. Vel praesentium nesciunt quam beatae est excepturi at saepe obcaecati veritatis accusantium sapiente molestiae distinctio itaque sed corrupti voluptate neque ipsum eaque magnam ullam, fugit earum? Minus corrupti aliquid totam, expedita laboriosam illo sequi quae autem beatae maxime? Libero, iste ut excepturi voluptatibus perferendis quasi nam repellendus.&lt;/p&gt;&lt;/html&gt;"/>
+            <Property name="verticalAlignment" type="int" value="1"/>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="txt_mulai_visualisasi">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Poppins Medium" size="18" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Mulai Visualisasi"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_mulai_visualisasiActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
