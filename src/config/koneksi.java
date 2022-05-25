@@ -19,7 +19,7 @@ public class koneksi {
    public static Connection koneksidb() throws SQLException{
        try {
            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-           con = DriverManager.getConnection("jdbc:mysql://localhost/APPEKS","root","");
+           con = DriverManager.getConnection("jdbc:mysql://localhost/appeks","root","");
        } catch (Exception e) {
            JOptionPane.showMessageDialog(null,"DAtabase Gagal "+e.getMessage());
        }

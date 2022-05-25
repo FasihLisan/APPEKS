@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Home;
+package Teori;
 
-import Teori.Teori;
+import Home.Home;
 import Visualisasi.visualisasi;
 import java.awt.Color;
 
@@ -13,12 +13,12 @@ import java.awt.Color;
  *
  * @author FASIH
  */
-public class Home extends javax.swing.JFrame {
+public class Teori extends javax.swing.JFrame {
 
     /**
-     * Creates new form Home
+     * Creates new form About
      */
-    public Home() {
+    public Teori() {
         initComponents();
     }
 
@@ -41,10 +41,9 @@ public class Home extends javax.swing.JFrame {
         jPanel2 = new panelGambar();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txt_mulai_visualisasi = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Home");
+        setTitle("Teori");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -156,25 +155,11 @@ public class Home extends javax.swing.JFrame {
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Poppins Medium", 0, 36)); // NOI18N
-        jLabel1.setText("Welcome to APPEKS");
+        jLabel1.setText("Teori Tentang Wireless Communication");
 
         jLabel3.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
         jLabel3.setText("<html><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatem ipsa veritatis eius harum mollitia assumenda eligendi id, vitae ratione totam itaque voluptatum voluptas! Eos, soluta sed? Suscipit vero reiciendis placeat tempora ex et similique cum, quos maiores officia quod impedit enim dolorum molestiae veritatis. Quo numquam, ut esse perspiciatis distinctio recusandae error illum velit. Nesciunt obcaecati doloribus laborum vero, praesentium omnis consequatur veritatis deserunt aut eius possimus magni dignissimos facere sed laboriosam perspiciatis? Nostrum repudiandae neque tenetur culpa fugiat architecto veritatis sed maiores veniam quo, modi et mollitia aperiam itaque unde esse rerum repellat sit velit quod placeat blanditiis at dicta magnam. Vel praesentium nesciunt quam beatae est excepturi at saepe obcaecati veritatis accusantium sapiente molestiae distinctio itaque sed corrupti voluptate neque ipsum eaque magnam ullam, fugit earum? Minus corrupti aliquid totam, expedita laboriosam illo sequi quae autem beatae maxime? Libero, iste ut excepturi voluptatibus perferendis quasi nam repellendus.</p></html>");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
-        txt_mulai_visualisasi.setBackground(new java.awt.Color(255, 255, 255));
-        txt_mulai_visualisasi.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
-        txt_mulai_visualisasi.setText("Mulai Visualisasi");
-        txt_mulai_visualisasi.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txt_mulai_visualisasiMouseClicked(evt);
-            }
-        });
-        txt_mulai_visualisasi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_mulai_visualisasiActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -183,10 +168,9 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,9 +179,7 @@ public class Home extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(302, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,6 +200,14 @@ public class Home extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void panel_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseClicked
+        Home hm = new Home();
+        hm.setVisible(true);
+        hm.pack();
+        hm.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_panel_homeMouseClicked
+
     private void panel_homeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseEntered
         panel_home.setBackground(Color.decode("#F3F7FB"));
     }//GEN-LAST:event_panel_homeMouseEntered
@@ -225,22 +215,6 @@ public class Home extends javax.swing.JFrame {
     private void panel_homeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseExited
         panel_home.setBackground(null);
     }//GEN-LAST:event_panel_homeMouseExited
-
-    private void panel_visualisasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseEntered
-        panel_visualisasi.setBackground(Color.decode("#F3F7FB"));
-    }//GEN-LAST:event_panel_visualisasiMouseEntered
-
-    private void panel_visualisasiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseExited
-        panel_visualisasi.setBackground(null);
-    }//GEN-LAST:event_panel_visualisasiMouseExited
-
-    private void panel_teoriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseEntered
-        panel_teori.setBackground(Color.decode("#F3F7FB"));
-    }//GEN-LAST:event_panel_teoriMouseEntered
-
-    private void panel_teoriMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseExited
-        panel_teori.setBackground(null);
-    }//GEN-LAST:event_panel_teoriMouseExited
 
     private void panel_visualisasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseClicked
         visualisasi vs = new visualisasi();
@@ -250,13 +224,13 @@ public class Home extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_panel_visualisasiMouseClicked
 
-    private void panel_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseClicked
-        Home hm = new Home();
-        hm.setVisible(true);
-        hm.pack();
-        hm.setLocationRelativeTo(null);
-        dispose();
-    }//GEN-LAST:event_panel_homeMouseClicked
+    private void panel_visualisasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseEntered
+        panel_visualisasi.setBackground(Color.decode("#F3F7FB"));
+    }//GEN-LAST:event_panel_visualisasiMouseEntered
+
+    private void panel_visualisasiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseExited
+        panel_visualisasi.setBackground(null);
+    }//GEN-LAST:event_panel_visualisasiMouseExited
 
     private void panel_teoriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseClicked
         Teori ab = new Teori();
@@ -266,17 +240,13 @@ public class Home extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_panel_teoriMouseClicked
 
-    private void txt_mulai_visualisasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_mulai_visualisasiActionPerformed
+    private void panel_teoriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseEntered
+        panel_teori.setBackground(Color.decode("#F3F7FB"));
+    }//GEN-LAST:event_panel_teoriMouseEntered
 
-    private void txt_mulai_visualisasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiMouseClicked
-        visualisasi vs = new visualisasi();
-        vs.setVisible(true);
-        vs.pack();
-        vs.setLocationRelativeTo(null);
-        dispose();
-    }//GEN-LAST:event_txt_mulai_visualisasiMouseClicked
+    private void panel_teoriMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseExited
+        panel_teori.setBackground(null);
+    }//GEN-LAST:event_panel_teoriMouseExited
 
     /**
      * @param args the command line arguments
@@ -295,20 +265,21 @@ public class Home extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Teori.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Teori.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Teori.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Teori.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Home().setVisible(true);
+                new Teori().setVisible(true);
             }
         });
     }
@@ -322,7 +293,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel panel_teori;
     private javax.swing.JPanel panel_visualisasi;
     private javax.swing.JLabel txt_home;
-    private javax.swing.JButton txt_mulai_visualisasi;
     private javax.swing.JLabel txt_teori;
     private javax.swing.JLabel txt_visualisasi;
     // End of variables declaration//GEN-END:variables
