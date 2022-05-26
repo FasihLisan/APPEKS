@@ -42,13 +42,14 @@ public class Home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txt_mulai_visualisasi = new javax.swing.JButton();
+        txt_pelajari = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        panel_home.setBackground(new java.awt.Color(255, 255, 255));
+        panel_home.setBackground(new java.awt.Color(243, 247, 251));
         panel_home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panel_homeMouseClicked(evt);
@@ -61,6 +62,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        txt_home.setBackground(new java.awt.Color(243, 247, 251));
         txt_home.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
         txt_home.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_home.setText("Home");
@@ -159,7 +161,7 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setText("Welcome to APPEKS");
 
         jLabel3.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
-        jLabel3.setText("<html><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatem ipsa veritatis eius harum mollitia assumenda eligendi id, vitae ratione totam itaque voluptatum voluptas! Eos, soluta sed? Suscipit vero reiciendis placeat tempora ex et similique cum, quos maiores officia quod impedit enim dolorum molestiae veritatis. Quo numquam, ut esse perspiciatis distinctio recusandae error illum velit. Nesciunt obcaecati doloribus laborum vero, praesentium omnis consequatur veritatis deserunt aut eius possimus magni dignissimos facere sed laboriosam perspiciatis? Nostrum repudiandae neque tenetur culpa fugiat architecto veritatis sed maiores veniam quo, modi et mollitia aperiam itaque unde esse rerum repellat sit velit quod placeat blanditiis at dicta magnam. Vel praesentium nesciunt quam beatae est excepturi at saepe obcaecati veritatis accusantium sapiente molestiae distinctio itaque sed corrupti voluptate neque ipsum eaque magnam ullam, fugit earum? Minus corrupti aliquid totam, expedita laboriosam illo sequi quae autem beatae maxime? Libero, iste ut excepturi voluptatibus perferendis quasi nam repellendus.</p></html>");
+        jLabel3.setText("<html><p>APPEKS atau aplikasi pemebelajaran proses kominukasi sistem adalah aplikasi yang digunakan untuk menunjang pembelajaran khususnya sistem komunikasi, aplikasi ini terdapat teori tentang komunikasi sistem dan terdapat visulisasi proses komunikasi mulai dari informasi pengirim, adc, modulasi, demodulasi, dac hingga penerima.</p></html>");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         txt_mulai_visualisasi.setBackground(new java.awt.Color(255, 255, 255));
@@ -169,10 +171,30 @@ public class Home extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txt_mulai_visualisasiMouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txt_mulai_visualisasiMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txt_mulai_visualisasiMouseExited(evt);
+            }
         });
         txt_mulai_visualisasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_mulai_visualisasiActionPerformed(evt);
+            }
+        });
+
+        txt_pelajari.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_pelajari.setText("Pelajari teori");
+        txt_pelajari.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_pelajariMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txt_pelajariMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txt_pelajariMouseExited(evt);
             }
         });
 
@@ -183,10 +205,13 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(txt_pelajari))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,10 +219,12 @@ public class Home extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_pelajari))
+                .addContainerGap(390, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -223,7 +250,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_panel_homeMouseEntered
 
     private void panel_homeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseExited
-        panel_home.setBackground(null);
+        panel_home.setBackground(Color.decode("#F3F7FB"));
     }//GEN-LAST:event_panel_homeMouseExited
 
     private void panel_visualisasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseEntered
@@ -278,6 +305,32 @@ public class Home extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_txt_mulai_visualisasiMouseClicked
 
+    private void txt_pelajariMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_pelajariMouseClicked
+        Teori ab = new Teori();
+        ab.setVisible(true);
+        ab.pack();
+        ab.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_txt_pelajariMouseClicked
+
+    private void txt_pelajariMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_pelajariMouseEntered
+        txt_pelajari.setForeground(Color.red);
+    }//GEN-LAST:event_txt_pelajariMouseEntered
+
+    private void txt_pelajariMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_pelajariMouseExited
+        txt_pelajari.setForeground(Color.black);
+    }//GEN-LAST:event_txt_pelajariMouseExited
+
+    private void txt_mulai_visualisasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiMouseEntered
+        txt_mulai_visualisasi.setBackground(Color.red);
+        txt_mulai_visualisasi.setForeground(Color.white);
+    }//GEN-LAST:event_txt_mulai_visualisasiMouseEntered
+
+    private void txt_mulai_visualisasiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiMouseExited
+        txt_mulai_visualisasi.setBackground(Color.white);
+        txt_mulai_visualisasi.setForeground(Color.black);
+    }//GEN-LAST:event_txt_mulai_visualisasiMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -323,6 +376,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel panel_visualisasi;
     private javax.swing.JLabel txt_home;
     private javax.swing.JButton txt_mulai_visualisasi;
+    private javax.swing.JLabel txt_pelajari;
     private javax.swing.JLabel txt_teori;
     private javax.swing.JLabel txt_visualisasi;
     // End of variables declaration//GEN-END:variables

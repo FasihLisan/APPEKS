@@ -139,7 +139,7 @@ public class visualisasi extends javax.swing.JFrame {
             .addComponent(txt_home, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
         );
 
-        panel_visualisasi.setBackground(new java.awt.Color(255, 255, 255));
+        panel_visualisasi.setBackground(new java.awt.Color(243, 247, 251));
         panel_visualisasi.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 panel_visualisasiMouseClicked(evt);
@@ -562,7 +562,7 @@ public class visualisasi extends javax.swing.JFrame {
     }//GEN-LAST:event_panel_visualisasiMouseEntered
 
     private void panel_visualisasiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseExited
-        panel_visualisasi.setBackground(null);
+        panel_visualisasi.setBackground(Color.decode("#F3F7FB"));
     }//GEN-LAST:event_panel_visualisasiMouseExited
 
     private void panel_teoriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseEntered
@@ -745,7 +745,7 @@ public class visualisasi extends javax.swing.JFrame {
         ab.setVisible(true);
         ab.pack();
         ab.setLocationRelativeTo(null);
-        dispose();
+        dispose();  
     }//GEN-LAST:event_panel_teoriMouseClicked
 
     /**
