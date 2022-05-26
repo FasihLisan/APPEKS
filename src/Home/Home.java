@@ -5,6 +5,8 @@
  */
 package Home;
 
+import Teori.Teori;
+import Visualisasi.visualisasi;
 import java.awt.Color;
 
 /**
@@ -34,20 +36,24 @@ public class Home extends javax.swing.JFrame {
         txt_home = new javax.swing.JLabel();
         panel_visualisasi = new javax.swing.JPanel();
         txt_visualisasi = new javax.swing.JLabel();
-        panel_about = new javax.swing.JPanel();
-        txt_about = new javax.swing.JLabel();
+        panel_teori = new javax.swing.JPanel();
+        txt_teori = new javax.swing.JLabel();
         jPanel2 = new panelGambar();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txt_mulai_visualisasi = new javax.swing.JButton();
+        txt_pelajari = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        panel_home.setBackground(new java.awt.Color(255, 255, 255));
+        panel_home.setBackground(new java.awt.Color(243, 247, 251));
         panel_home.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panel_homeMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 panel_homeMouseEntered(evt);
             }
@@ -56,6 +62,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
+        txt_home.setBackground(new java.awt.Color(243, 247, 251));
         txt_home.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
         txt_home.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_home.setText("Home");
@@ -73,6 +80,9 @@ public class Home extends javax.swing.JFrame {
 
         panel_visualisasi.setBackground(new java.awt.Color(255, 255, 255));
         panel_visualisasi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panel_visualisasiMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 panel_visualisasiMouseEntered(evt);
             }
@@ -96,30 +106,33 @@ public class Home extends javax.swing.JFrame {
             .addComponent(txt_visualisasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        panel_about.setBackground(new java.awt.Color(255, 255, 255));
-        panel_about.addMouseListener(new java.awt.event.MouseAdapter() {
+        panel_teori.setBackground(new java.awt.Color(255, 255, 255));
+        panel_teori.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panel_teoriMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                panel_aboutMouseEntered(evt);
+                panel_teoriMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                panel_aboutMouseExited(evt);
+                panel_teoriMouseExited(evt);
             }
         });
 
-        txt_about.setBackground(new java.awt.Color(255, 255, 255));
-        txt_about.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
-        txt_about.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt_about.setText("About");
+        txt_teori.setBackground(new java.awt.Color(255, 255, 255));
+        txt_teori.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_teori.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txt_teori.setText("Teori");
 
-        javax.swing.GroupLayout panel_aboutLayout = new javax.swing.GroupLayout(panel_about);
-        panel_about.setLayout(panel_aboutLayout);
-        panel_aboutLayout.setHorizontalGroup(
-            panel_aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_about, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+        javax.swing.GroupLayout panel_teoriLayout = new javax.swing.GroupLayout(panel_teori);
+        panel_teori.setLayout(panel_teoriLayout);
+        panel_teoriLayout.setHorizontalGroup(
+            panel_teoriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_teori, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
         );
-        panel_aboutLayout.setVerticalGroup(
-            panel_aboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txt_about, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        panel_teoriLayout.setVerticalGroup(
+            panel_teoriLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(txt_teori, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -131,13 +144,13 @@ public class Home extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(panel_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(panel_about, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panel_teori, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 753, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panel_home, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panel_about, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_teori, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(panel_visualisasi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -148,15 +161,40 @@ public class Home extends javax.swing.JFrame {
         jLabel1.setText("Welcome to APPEKS");
 
         jLabel3.setFont(new java.awt.Font("Poppins Light", 0, 18)); // NOI18N
-        jLabel3.setText("<html><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatem ipsa veritatis eius harum mollitia assumenda eligendi id, vitae ratione totam itaque voluptatum voluptas! Eos, soluta sed? Suscipit vero reiciendis placeat tempora ex et similique cum, quos maiores officia quod impedit enim dolorum molestiae veritatis. Quo numquam, ut esse perspiciatis distinctio recusandae error illum velit. Nesciunt obcaecati doloribus laborum vero, praesentium omnis consequatur veritatis deserunt aut eius possimus magni dignissimos facere sed laboriosam perspiciatis? Nostrum repudiandae neque tenetur culpa fugiat architecto veritatis sed maiores veniam quo, modi et mollitia aperiam itaque unde esse rerum repellat sit velit quod placeat blanditiis at dicta magnam. Vel praesentium nesciunt quam beatae est excepturi at saepe obcaecati veritatis accusantium sapiente molestiae distinctio itaque sed corrupti voluptate neque ipsum eaque magnam ullam, fugit earum? Minus corrupti aliquid totam, expedita laboriosam illo sequi quae autem beatae maxime? Libero, iste ut excepturi voluptatibus perferendis quasi nam repellendus.</p></html>");
+        jLabel3.setText("<html><p>APPEKS atau aplikasi pemebelajaran proses kominukasi sistem adalah aplikasi yang digunakan untuk menunjang pembelajaran khususnya sistem komunikasi, aplikasi ini terdapat teori tentang komunikasi sistem dan terdapat visulisasi proses komunikasi mulai dari informasi pengirim, adc, modulasi, demodulasi, dac hingga penerima.</p></html>");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         txt_mulai_visualisasi.setBackground(new java.awt.Color(255, 255, 255));
         txt_mulai_visualisasi.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
         txt_mulai_visualisasi.setText("Mulai Visualisasi");
+        txt_mulai_visualisasi.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_mulai_visualisasiMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txt_mulai_visualisasiMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txt_mulai_visualisasiMouseExited(evt);
+            }
+        });
         txt_mulai_visualisasi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_mulai_visualisasiActionPerformed(evt);
+            }
+        });
+
+        txt_pelajari.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_pelajari.setText("Pelajari teori");
+        txt_pelajari.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_pelajariMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txt_pelajariMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txt_pelajariMouseExited(evt);
             }
         });
 
@@ -167,10 +205,13 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(txt_pelajari))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,10 +219,12 @@ public class Home extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_mulai_visualisasi, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_pelajari))
+                .addContainerGap(390, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -207,7 +250,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_panel_homeMouseEntered
 
     private void panel_homeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseExited
-        panel_home.setBackground(null);
+        panel_home.setBackground(Color.decode("#F3F7FB"));
     }//GEN-LAST:event_panel_homeMouseExited
 
     private void panel_visualisasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseEntered
@@ -218,17 +261,75 @@ public class Home extends javax.swing.JFrame {
         panel_visualisasi.setBackground(null);
     }//GEN-LAST:event_panel_visualisasiMouseExited
 
-    private void panel_aboutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_aboutMouseEntered
-        panel_about.setBackground(Color.decode("#F3F7FB"));
-    }//GEN-LAST:event_panel_aboutMouseEntered
+    private void panel_teoriMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseEntered
+        panel_teori.setBackground(Color.decode("#F3F7FB"));
+    }//GEN-LAST:event_panel_teoriMouseEntered
 
-    private void panel_aboutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_aboutMouseExited
-        panel_about.setBackground(null);
-    }//GEN-LAST:event_panel_aboutMouseExited
+    private void panel_teoriMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseExited
+        panel_teori.setBackground(null);
+    }//GEN-LAST:event_panel_teoriMouseExited
+
+    private void panel_visualisasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_visualisasiMouseClicked
+        visualisasi vs = new visualisasi();
+        vs.setVisible(true);
+        vs.pack();
+        vs.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_panel_visualisasiMouseClicked
+
+    private void panel_homeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_homeMouseClicked
+        Home hm = new Home();
+        hm.setVisible(true);
+        hm.pack();
+        hm.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_panel_homeMouseClicked
+
+    private void panel_teoriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_teoriMouseClicked
+        Teori ab = new Teori();
+        ab.setVisible(true);
+        ab.pack();
+        ab.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_panel_teoriMouseClicked
 
     private void txt_mulai_visualisasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_mulai_visualisasiActionPerformed
+
+    private void txt_mulai_visualisasiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiMouseClicked
+        visualisasi vs = new visualisasi();
+        vs.setVisible(true);
+        vs.pack();
+        vs.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_txt_mulai_visualisasiMouseClicked
+
+    private void txt_pelajariMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_pelajariMouseClicked
+        Teori ab = new Teori();
+        ab.setVisible(true);
+        ab.pack();
+        ab.setLocationRelativeTo(null);
+        dispose();
+    }//GEN-LAST:event_txt_pelajariMouseClicked
+
+    private void txt_pelajariMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_pelajariMouseEntered
+        txt_pelajari.setForeground(Color.red);
+    }//GEN-LAST:event_txt_pelajariMouseEntered
+
+    private void txt_pelajariMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_pelajariMouseExited
+        txt_pelajari.setForeground(Color.black);
+    }//GEN-LAST:event_txt_pelajariMouseExited
+
+    private void txt_mulai_visualisasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiMouseEntered
+        txt_mulai_visualisasi.setBackground(Color.red);
+        txt_mulai_visualisasi.setForeground(Color.white);
+    }//GEN-LAST:event_txt_mulai_visualisasiMouseEntered
+
+    private void txt_mulai_visualisasiMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_mulai_visualisasiMouseExited
+        txt_mulai_visualisasi.setBackground(Color.white);
+        txt_mulai_visualisasi.setForeground(Color.black);
+    }//GEN-LAST:event_txt_mulai_visualisasiMouseExited
 
     /**
      * @param args the command line arguments
@@ -270,12 +371,13 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel panel_about;
     private javax.swing.JPanel panel_home;
+    private javax.swing.JPanel panel_teori;
     private javax.swing.JPanel panel_visualisasi;
-    private javax.swing.JLabel txt_about;
     private javax.swing.JLabel txt_home;
     private javax.swing.JButton txt_mulai_visualisasi;
+    private javax.swing.JLabel txt_pelajari;
+    private javax.swing.JLabel txt_teori;
     private javax.swing.JLabel txt_visualisasi;
     // End of variables declaration//GEN-END:variables
 }
