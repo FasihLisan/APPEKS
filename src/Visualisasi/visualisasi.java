@@ -93,7 +93,7 @@ public class visualisasi extends javax.swing.JFrame {
         btn_demodulasi = new javax.swing.JButton();
         jPanel6 = new DemodulasiWave();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btn_output = new javax.swing.JButton();
         panel_pengirim = new javax.swing.JPanel();
         txt_pesan = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -222,13 +222,14 @@ public class visualisasi extends javax.swing.JFrame {
         panel_penerima.setOpaque(false);
 
         txt_output.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_output.setBorder(null);
         txt_output.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_outputActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Output PEsan");
+        jLabel3.setText("Output Pesan");
 
         btn_dac.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/btn_dac.png"))); // NOI18N
         btn_dac.setBorder(null);
@@ -288,24 +289,36 @@ public class visualisasi extends javax.swing.JFrame {
         });
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel6.setPreferredSize(new java.awt.Dimension(537, 186));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 525, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 178, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/antena_penerima.png"))); // NOI18N
 
-        jButton1.setText("OUTPUT");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_output.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/btn_output.png"))); // NOI18N
+        btn_output.setBorderPainted(false);
+        btn_output.setContentAreaFilled(false);
+        btn_output.setFocusPainted(false);
+        btn_output.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_outputMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_outputMouseExited(evt);
+            }
+        });
+        btn_output.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_outputActionPerformed(evt);
             }
         });
 
@@ -314,30 +327,31 @@ public class visualisasi extends javax.swing.JFrame {
         panel_penerimaLayout.setHorizontalGroup(
             panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_penerimaLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_penerimaLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(panel_penerimaLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(btn_demodulasi, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_penerimaLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(panel_penerimaLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_penerimaLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel6)
+                                .addGap(18, 18, 18)
+                                .addComponent(btn_demodulasi, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panel_penerimaLayout.createSequentialGroup()
                                 .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txt_output, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel4)
-                                .addGap(14, 14, 14)
+                                .addGap(42, 42, 42)
                                 .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(btn_dac, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
-                .addGap(20, 20, 20))
+                                    .addComponent(btn_dac, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
+                                    .addComponent(btn_output, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                        .addGap(8, 8, 8)))
+                .addContainerGap())
         );
         panel_penerimaLayout.setVerticalGroup(
             panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,23 +359,24 @@ public class visualisasi extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(7, 7, 7)
-                .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(txt_output, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_output)
+                    .addComponent(txt_output, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_penerimaLayout.createSequentialGroup()
-                        .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_penerimaLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel4))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_demodulasi, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)))
-                    .addComponent(btn_dac))
+                        .addComponent(btn_dac))
+                    .addGroup(panel_penerimaLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel4))
+                    .addGroup(panel_penerimaLayout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
+                .addGroup(panel_penerimaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_demodulasi, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(23, 23, 23))
         );
@@ -370,6 +385,7 @@ public class visualisasi extends javax.swing.JFrame {
         panel_pengirim.setOpaque(false);
 
         txt_pesan.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_pesan.setBorder(null);
         txt_pesan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_pesanActionPerformed(evt);
@@ -444,7 +460,7 @@ public class visualisasi extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 178, Short.MAX_VALUE)
+            .addGap(0, 181, Short.MAX_VALUE)
         );
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/antena_pengirim.png"))); // NOI18N
@@ -493,7 +509,7 @@ public class visualisasi extends javax.swing.JFrame {
                     .addComponent(btn_modulasi, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
                 .addGap(23, 23, 23))
         );
 
@@ -754,7 +770,7 @@ public class visualisasi extends javax.swing.JFrame {
         dispose();  
     }//GEN-LAST:event_panel_teoriMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_outputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_outputActionPerformed
         String biner = txt_dac.getText();
         String[] parts = biner.split(" ");
         StringBuilder sb = new StringBuilder();
@@ -765,7 +781,15 @@ public class visualisasi extends javax.swing.JFrame {
             sb.append(c);
         }
         txt_output.setText(sb.toString());
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_outputActionPerformed
+
+    private void btn_outputMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_outputMouseEntered
+        btn_output.setSize(130,60);
+    }//GEN-LAST:event_btn_outputMouseEntered
+
+    private void btn_outputMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_outputMouseExited
+        btn_output.setSize(130,55);
+    }//GEN-LAST:event_btn_outputMouseExited
 
     /**
      * @param args the command line arguments
@@ -807,8 +831,8 @@ public class visualisasi extends javax.swing.JFrame {
     private javax.swing.JButton btn_dac;
     private javax.swing.JButton btn_demodulasi;
     private javax.swing.JButton btn_modulasi;
+    private javax.swing.JButton btn_output;
     private javax.swing.JButton btn_reset;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
