@@ -222,6 +222,7 @@ public class visualisasi extends javax.swing.JFrame {
         panel_penerima.setOpaque(false);
 
         txt_output.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_output.setBorder(null);
         txt_output.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_outputActionPerformed(evt);
@@ -383,6 +384,7 @@ public class visualisasi extends javax.swing.JFrame {
         panel_pengirim.setOpaque(false);
 
         txt_pesan.setFont(new java.awt.Font("Poppins Medium", 0, 18)); // NOI18N
+        txt_pesan.setBorder(null);
         txt_pesan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_pesanActionPerformed(evt);
