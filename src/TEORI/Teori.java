@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package TEORI;
-
-import Backup.*;
 import TEORI.*;
 import HOME.Home;
 import VISUALISASI.Visualisasi;
@@ -35,18 +33,23 @@ public class Teori extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         MENU = new komponen.JPANEL();
-        gmbr_Logo = new javax.swing.JPanel();
         DASHBOARD = new komponen.JPANEL();
-        dsb_logo = new javax.swing.JPanel();
         dsb_label = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         VISUALISASI = new komponen.JPANEL();
-        vs_logo = new javax.swing.JPanel();
         vs_label = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         TENTANG = new komponen.JPANEL();
-        tr_logo = new javax.swing.JPanel();
-        tr = new javax.swing.JLabel();
+        tr_label = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         LOGO = new javax.swing.JLabel();
+        logo = new komponen.JPANEL();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btn_logout = new javax.swing.JLabel();
         LABEL = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         BODY = new komponen.JPANEL();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
@@ -73,37 +76,22 @@ public class Teori extends javax.swing.JFrame {
         dacPanel = new dac();
         dfns7 = new javax.swing.JLabel();
         t8 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1280, 720));
 
         jPanel1.setBackground(new java.awt.Color(16, 21, 51));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1280, 720));
 
         MENU.setForeground(new java.awt.Color(47, 53, 103));
+        MENU.setPreferredSize(new java.awt.Dimension(331, 690));
         MENU.setRoundTopLeft(30);
         MENU.setRoundqBottomLeft(30);
         MENU.setRoundqBottomRight(30);
         MENU.setRoundqTopRight(30);
 
-        gmbr_Logo.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout gmbr_LogoLayout = new javax.swing.GroupLayout(gmbr_Logo);
-        gmbr_Logo.setLayout(gmbr_LogoLayout);
-        gmbr_LogoLayout.setHorizontalGroup(
-            gmbr_LogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 28, Short.MAX_VALUE)
-        );
-        gmbr_LogoLayout.setVerticalGroup(
-            gmbr_LogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
+        DASHBOARD.setBackground(new java.awt.Color(47, 53, 103));
         DASHBOARD.setForeground(new java.awt.Color(47, 53, 103));
+        DASHBOARD.setPreferredSize(new java.awt.Dimension(278, 59));
         DASHBOARD.setRoundTopLeft(15);
         DASHBOARD.setRoundqBottomLeft(15);
         DASHBOARD.setRoundqBottomRight(15);
@@ -120,45 +108,36 @@ public class Teori extends javax.swing.JFrame {
             }
         });
 
-        dsb_logo.setBackground(new java.awt.Color(255, 255, 255));
-        dsb_logo.setForeground(new java.awt.Color(47, 53, 103));
-
-        javax.swing.GroupLayout dsb_logoLayout = new javax.swing.GroupLayout(dsb_logo);
-        dsb_logo.setLayout(dsb_logoLayout);
-        dsb_logoLayout.setHorizontalGroup(
-            dsb_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-        );
-        dsb_logoLayout.setVerticalGroup(
-            dsb_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
-        );
-
-        dsb_label.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        dsb_label.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
         dsb_label.setForeground(new java.awt.Color(255, 255, 255));
         dsb_label.setText("Home");
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/komponen/Home_icon.png"))); // NOI18N
 
         javax.swing.GroupLayout DASHBOARDLayout = new javax.swing.GroupLayout(DASHBOARD);
         DASHBOARD.setLayout(DASHBOARDLayout);
         DASHBOARDLayout.setHorizontalGroup(
             DASHBOARDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DASHBOARDLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(dsb_logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dsb_label, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(dsb_label, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE))
         );
         DASHBOARDLayout.setVerticalGroup(
             DASHBOARDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DASHBOARDLayout.createSequentialGroup()
+                .addComponent(dsb_label, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(DASHBOARDLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(dsb_logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(dsb_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         VISUALISASI.setBackground(new java.awt.Color(47, 53, 103));
         VISUALISASI.setForeground(new java.awt.Color(47, 53, 103));
+        VISUALISASI.setPreferredSize(new java.awt.Dimension(278, 59));
         VISUALISASI.setRoundTopLeft(15);
         VISUALISASI.setRoundqBottomLeft(15);
         VISUALISASI.setRoundqBottomRight(15);
@@ -175,44 +154,33 @@ public class Teori extends javax.swing.JFrame {
             }
         });
 
-        vs_logo.setBackground(new java.awt.Color(255, 255, 255));
-        vs_logo.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout vs_logoLayout = new javax.swing.GroupLayout(vs_logo);
-        vs_logo.setLayout(vs_logoLayout);
-        vs_logoLayout.setHorizontalGroup(
-            vs_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-        );
-        vs_logoLayout.setVerticalGroup(
-            vs_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
-        );
-
-        vs_label.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
+        vs_label.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
         vs_label.setForeground(new java.awt.Color(255, 255, 255));
         vs_label.setText("Visualisasi");
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/komponen/Message_icon.png"))); // NOI18N
 
         javax.swing.GroupLayout VISUALISASILayout = new javax.swing.GroupLayout(VISUALISASI);
         VISUALISASI.setLayout(VISUALISASILayout);
         VISUALISASILayout.setHorizontalGroup(
             VISUALISASILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(VISUALISASILayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(vs_logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(vs_label, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(vs_label, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         VISUALISASILayout.setVerticalGroup(
             VISUALISASILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(vs_label, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(vs_label, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
             .addGroup(VISUALISASILayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(vs_logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        TENTANG.setBackground(new java.awt.Color(47, 53, 103));
+        TENTANG.setBackground(new java.awt.Color(255, 255, 255));
         TENTANG.setForeground(new java.awt.Color(255, 255, 255));
         TENTANG.setRoundTopLeft(15);
         TENTANG.setRoundqBottomLeft(15);
@@ -230,85 +198,148 @@ public class Teori extends javax.swing.JFrame {
             }
         });
 
-        tr_logo.setBackground(new java.awt.Color(47, 53, 103));
-        tr_logo.setForeground(new java.awt.Color(47, 53, 103));
+        tr_label.setFont(new java.awt.Font("Roboto Medium", 0, 16)); // NOI18N
+        tr_label.setText("Teori");
 
-        javax.swing.GroupLayout tr_logoLayout = new javax.swing.GroupLayout(tr_logo);
-        tr_logo.setLayout(tr_logoLayout);
-        tr_logoLayout.setHorizontalGroup(
-            tr_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-        );
-        tr_logoLayout.setVerticalGroup(
-            tr_logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
-        );
-
-        tr.setFont(new java.awt.Font("Dialog", 1, 16)); // NOI18N
-        tr.setForeground(new java.awt.Color(47, 53, 103));
-        tr.setText("Teori");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/komponen/Activity_1.png"))); // NOI18N
 
         javax.swing.GroupLayout TENTANGLayout = new javax.swing.GroupLayout(TENTANG);
         TENTANG.setLayout(TENTANGLayout);
         TENTANGLayout.setHorizontalGroup(
             TENTANGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TENTANGLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(tr_logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tr, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tr_label, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         TENTANGLayout.setVerticalGroup(
             TENTANGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(TENTANGLayout.createSequentialGroup()
+            .addComponent(tr_label, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TENTANGLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tr_logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
+        LOGO.setBackground(new java.awt.Color(255, 255, 255));
         LOGO.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        LOGO.setForeground(new java.awt.Color(255, 255, 255));
+        LOGO.setForeground(new java.awt.Color(255, 81, 81));
         LOGO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LOGO.setText("APPEKS");
+
+        logo.setForeground(new java.awt.Color(255, 255, 255));
+        logo.setPreferredSize(new java.awt.Dimension(70, 70));
+        logo.setRoundTopLeft(100);
+        logo.setRoundqBottomLeft(100);
+        logo.setRoundqBottomRight(100);
+        logo.setRoundqTopRight(100);
+        logo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoMouseClicked(evt);
+            }
+        });
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/komponen/side_bar_logo.png"))); // NOI18N
+
+        javax.swing.GroupLayout logoLayout = new javax.swing.GroupLayout(logo);
+        logo.setLayout(logoLayout);
+        logoLayout.setHorizontalGroup(
+            logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(logoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel3)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        logoLayout.setVerticalGroup(
+            logoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(logoLayout.createSequentialGroup()
+                .addContainerGap(17, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        jLabel4.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel4.setText("<html>Apliksi Pembelajaran Proses Sistem Komunikasi Wireless</html>");
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/komponen/logout_icon.png"))); // NOI18N
+
+        btn_logout.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
+        btn_logout.setForeground(new java.awt.Color(255, 81, 81));
+        btn_logout.setText("Logout");
+        btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_logoutMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btn_logoutMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btn_logoutMouseExited(evt);
+            }
+        });
 
         javax.swing.GroupLayout MENULayout = new javax.swing.GroupLayout(MENU);
         MENU.setLayout(MENULayout);
         MENULayout.setHorizontalGroup(
             MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MENULayout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(gmbr_Logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LOGO)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(MENULayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DASHBOARD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(VISUALISASI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(TENTANG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, MENULayout.createSequentialGroup()
+                            .addGap(25, 25, 25)
+                            .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(DASHBOARD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(MENULayout.createSequentialGroup()
+                                    .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(LOGO)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(MENULayout.createSequentialGroup()
+                            .addGap(13, 13, 13)
+                            .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(VISUALISASI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TENTANG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(MENULayout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btn_logout)))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         MENULayout.setVerticalGroup(
             MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MENULayout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(gmbr_Logo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(LOGO, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
-                .addGap(59, 59, 59)
+                .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MENULayout.createSequentialGroup()
+                        .addComponent(LOGO, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
                 .addComponent(DASHBOARD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(VISUALISASI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(TENTANG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(431, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 419, Short.MAX_VALUE)
+                .addGroup(MENULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_logout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
 
-        LABEL.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        LABEL.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         LABEL.setForeground(new java.awt.Color(255, 255, 255));
-        LABEL.setText("TEORI");
+        LABEL.setText("Teori");
+
+        jLabel1.setFont(new java.awt.Font("Poppins Medium", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("<html>WIRELESS COMMUNICATION</html>");
 
         BODY.setForeground(new java.awt.Color(47, 53, 103));
         BODY.setRoundTopLeft(30);
@@ -462,9 +493,9 @@ public class Teori extends javax.swing.JFrame {
         t8.setForeground(new java.awt.Color(255, 255, 255));
         t8.setText("<html> <ul> <p>Informasi output adalah informasi dari pengirim yang telang melalui proses demodulasi dan dac hingga sampai ke penerima dalam bentuk informasi seperti pesan atau teks</p> </ul> </html>\n");
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Teori Tentang Wireless Communication");
+        jLabel9.setFont(new java.awt.Font("Dialog", 1, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Teori Tentang Wireless Communication");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -524,7 +555,7 @@ public class Teori extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
+                            .addComponent(jLabel9)
                             .addComponent(t5, javax.swing.GroupLayout.PREFERRED_SIZE, 855, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(t6, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -548,7 +579,7 @@ public class Teori extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
+                .addComponent(jLabel9)
                 .addGap(23, 23, 23)
                 .addComponent(dfns)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -564,7 +595,7 @@ public class Teori extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dfns2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(t3)
+                .addComponent(t3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(adcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -604,24 +635,16 @@ public class Teori extends javax.swing.JFrame {
             BODYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BODYLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1059, Short.MAX_VALUE)
                 .addContainerGap())
         );
         BODYLayout.setVerticalGroup(
             BODYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BODYLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
                 .addContainerGap())
         );
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("WIRELESS");
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("COMMUNICATION");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -630,38 +653,34 @@ public class Teori extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(MENU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(15, 15, 15))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(LABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 641, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(29, 29, 29))))
+                .addGap(34, 34, 34)
+                .addComponent(LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addContainerGap(382, Short.MAX_VALUE)
+                    .addComponent(BODY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(MENU, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LABEL)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(MENU, javax.swing.GroupLayout.DEFAULT_SIZE, 788, Short.MAX_VALUE))
                 .addGap(25, 25, 25))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(97, 97, 97)
+                    .addComponent(BODY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(24, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -679,54 +698,6 @@ public class Teori extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void VISUALISASIMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VISUALISASIMouseEntered
-        VISUALISASI.setForeground(new Color(255,255,255));
-        vs_logo.setBackground(new Color(47, 53, 103));
-        vs_label.setForeground(new Color(47, 53, 103));
-        
-       TENTANG.setForeground(new Color(47, 53, 103));
-        tr_logo.setBackground(new Color(255,255,255));
-        tr.setForeground(new Color(255,255,255));
-    }//GEN-LAST:event_VISUALISASIMouseEntered
-
-    private void VISUALISASIMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VISUALISASIMouseExited
-        VISUALISASI.setForeground(new Color(47, 53, 103));
-        vs_logo.setBackground(new Color(255,255,255));
-        vs_label.setForeground(new Color(255,255,255));
-        
-        TENTANG.setForeground(new Color(255,255,255));
-        tr_logo.setBackground(new Color(47, 53, 103));
-        tr.setForeground(new Color(47, 53, 103));
-    }//GEN-LAST:event_VISUALISASIMouseExited
-
-    private void TENTANGMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TENTANGMouseEntered
-       
-    }//GEN-LAST:event_TENTANGMouseEntered
-
-    private void TENTANGMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TENTANGMouseExited
-        
-    }//GEN-LAST:event_TENTANGMouseExited
-
-    private void DASHBOARDMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DASHBOARDMouseEntered
-        DASHBOARD.setForeground(new Color(255,255,255));
-        dsb_logo.setBackground(new Color(47, 53, 103));
-        dsb_label.setForeground(new Color(47, 53, 103));
-        
-        TENTANG.setForeground(new Color(47, 53, 103));
-        tr_logo.setBackground(new Color(255,255,255));
-        tr.setForeground(new Color(255,255,255));
-    }//GEN-LAST:event_DASHBOARDMouseEntered
-
-    private void DASHBOARDMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DASHBOARDMouseExited
-         DASHBOARD.setForeground(new Color(47, 53, 103));
-        dsb_logo.setBackground(new Color(255,255,255));
-        dsb_label.setForeground(new Color(255,255,255));
-        
-       TENTANG.setForeground(new Color(255,255,255));
-        tr_logo.setBackground(new Color(47, 53, 103));
-        tr.setForeground(new Color(47, 53, 103));
-    }//GEN-LAST:event_DASHBOARDMouseExited
-
     private void DASHBOARDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DASHBOARDMouseClicked
         Home hm = new Home();
         hm.setVisible(true);
@@ -743,6 +714,24 @@ public class Teori extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_VISUALISASIMouseClicked
 
+    private void VISUALISASIMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VISUALISASIMouseEntered
+        VISUALISASI.setForeground(new Color(255,255,255));
+        vs_label.setForeground(new Color(47, 53, 103));
+        
+        tr_label.setForeground(new Color(255,255,255));
+
+        TENTANG.setForeground(new Color(47, 53, 103));
+    }//GEN-LAST:event_VISUALISASIMouseEntered
+
+    private void VISUALISASIMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_VISUALISASIMouseExited
+        VISUALISASI.setForeground(new Color(47, 53, 103));
+        vs_label.setForeground(new Color(255,255,255));
+        
+        tr_label.setForeground(new Color(47, 53, 103));
+
+        TENTANG.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_VISUALISASIMouseExited
+
     private void TENTANGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TENTANGMouseClicked
         Teori tt = new Teori();
         tt.setVisible(true);
@@ -750,6 +739,48 @@ public class Teori extends javax.swing.JFrame {
         tt.setLocationRelativeTo(null);
         dispose();
     }//GEN-LAST:event_TENTANGMouseClicked
+
+    private void TENTANGMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TENTANGMouseEntered
+
+    }//GEN-LAST:event_TENTANGMouseEntered
+
+    private void TENTANGMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TENTANGMouseExited
+
+    }//GEN-LAST:event_TENTANGMouseExited
+
+    private void logoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logoMouseClicked
+
+    private void btn_logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_logoutMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_btn_logoutMouseClicked
+
+    private void btn_logoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_logoutMouseEntered
+        btn_logout.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_btn_logoutMouseEntered
+
+    private void btn_logoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_logoutMouseExited
+        btn_logout.setForeground(new Color(0xFF5151));
+    }//GEN-LAST:event_btn_logoutMouseExited
+
+    private void DASHBOARDMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DASHBOARDMouseEntered
+        DASHBOARD.setForeground(new Color(255,255,255));
+        dsb_label.setForeground(new Color(47, 53, 103));
+        
+        tr_label.setForeground(new Color(255,255,255));
+
+        TENTANG.setForeground(new Color(47, 53, 103));
+    }//GEN-LAST:event_DASHBOARDMouseEntered
+
+    private void DASHBOARDMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DASHBOARDMouseExited
+         DASHBOARD.setForeground(new Color(47, 53, 103));
+        dsb_label.setForeground(new Color(255,255,255));
+        
+        tr_label.setForeground(new Color(47, 53, 103));
+
+        TENTANG.setForeground(new Color(255,255,255));
+    }//GEN-LAST:event_DASHBOARDMouseExited
 
     /**
      * @param args the command line arguments
@@ -924,6 +955,7 @@ public class Teori extends javax.swing.JFrame {
     private komponen.JPANEL TENTANG;
     private komponen.JPANEL VISUALISASI;
     private javax.swing.JPanel adcPanel;
+    private javax.swing.JLabel btn_logout;
     private javax.swing.JPanel dacPanel;
     private javax.swing.JLabel dfns;
     private javax.swing.JLabel dfns1;
@@ -935,14 +967,18 @@ public class Teori extends javax.swing.JFrame {
     private javax.swing.JLabel dfns7;
     private javax.swing.JPanel dmdlsPanel;
     private javax.swing.JLabel dsb_label;
-    private javax.swing.JPanel dsb_logo;
-    private javax.swing.JPanel gmbr_Logo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane2;
+    private komponen.JPANEL logo;
     private javax.swing.JPanel mdlsPanel;
     private javax.swing.JLabel t1;
     private javax.swing.JLabel t2;
@@ -952,9 +988,7 @@ public class Teori extends javax.swing.JFrame {
     private javax.swing.JLabel t6;
     private javax.swing.JLabel t7;
     private javax.swing.JLabel t8;
-    private javax.swing.JLabel tr;
-    private javax.swing.JPanel tr_logo;
+    private javax.swing.JLabel tr_label;
     private javax.swing.JLabel vs_label;
-    private javax.swing.JPanel vs_logo;
     // End of variables declaration//GEN-END:variables
 }
