@@ -242,7 +242,7 @@ public class Home extends javax.swing.JFrame {
 
         btn_logout.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         btn_logout.setForeground(new java.awt.Color(255, 81, 81));
-        btn_logout.setText("Logout");
+        btn_logout.setText("Close App");
         btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_logoutMouseClicked(evt);

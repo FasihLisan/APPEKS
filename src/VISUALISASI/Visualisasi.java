@@ -100,6 +100,7 @@ public class Visualisasi extends javax.swing.JFrame {
         btn_modulasi = new javax.swing.JButton();
         jPanel3 = new ModulasiWave();
         jLabel17 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         btn_reset = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -292,7 +293,7 @@ public class Visualisasi extends javax.swing.JFrame {
 
         btn_logout.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         btn_logout.setForeground(new java.awt.Color(255, 81, 81));
-        btn_logout.setText("Logout");
+        btn_logout.setText("Close App");
         btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_logoutMouseClicked(evt);
@@ -545,7 +546,7 @@ public class Visualisasi extends javax.swing.JFrame {
         );
 
         panel_pengirim.setBackground(new java.awt.Color(255, 255, 255));
-        panel_pengirim.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Penerima", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
+        panel_pengirim.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pengirim", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 0, 13), new java.awt.Color(255, 255, 255))); // NOI18N
         panel_pengirim.setForeground(new java.awt.Color(255, 255, 255));
         panel_pengirim.setOpaque(false);
 
@@ -556,9 +557,20 @@ public class Visualisasi extends javax.swing.JFrame {
                 txt_pesanActionPerformed(evt);
             }
         });
+        txt_pesan.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_pesanKeyPressed(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_pesanKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_pesanKeyTyped(evt);
+            }
+        });
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Input Pesan");
+        jLabel2.setText("Input Pesan ");
 
         btn_adc.setBackground(new java.awt.Color(47, 53, 103));
         btn_adc.setForeground(new java.awt.Color(47, 53, 103));
@@ -635,6 +647,9 @@ public class Visualisasi extends javax.swing.JFrame {
 
         jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/komponen/antena_pengirim.png"))); // NOI18N
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("(except: special caracter(') and max length 28)");
+
         javax.swing.GroupLayout panel_pengirimLayout = new javax.swing.GroupLayout(panel_pengirim);
         panel_pengirim.setLayout(panel_pengirimLayout);
         panel_pengirimLayout.setHorizontalGroup(
@@ -652,7 +667,10 @@ public class Visualisasi extends javax.swing.JFrame {
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
                     .addGroup(panel_pengirimLayout.createSequentialGroup()
                         .addGroup(panel_pengirimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
+                            .addGroup(panel_pengirimLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel9))
                             .addGroup(panel_pengirimLayout.createSequentialGroup()
                                 .addComponent(btn_modulasi, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -664,7 +682,9 @@ public class Visualisasi extends javax.swing.JFrame {
             panel_pengirimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_pengirimLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addGroup(panel_pengirimLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel9))
                 .addGap(7, 7, 7)
                 .addComponent(txt_pesan, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -756,7 +776,7 @@ public class Visualisasi extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                            .addComponent(LABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(BODY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -869,6 +889,8 @@ public class Visualisasi extends javax.swing.JFrame {
             ResultSet rs = ps.executeQuery();
             rs.next();
             txt_dac2.setText(rs.getString("biner_pesan"));
+            JOptionPane.showMessageDialog(null, "Berhasil di Convert");
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "gagal melakukakn demodulasi"+e);
         }
@@ -884,6 +906,8 @@ public class Visualisasi extends javax.swing.JFrame {
 
     private void btn_demodulasi2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_demodulasi2ActionPerformed
         jPanel8.setVisible(true);
+        JOptionPane.showMessageDialog(null, "Berhasil di Demodulasi");
+
     }//GEN-LAST:event_btn_demodulasi2ActionPerformed
 
     private void btn_outputMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_outputMouseEntered
@@ -905,6 +929,8 @@ public class Visualisasi extends javax.swing.JFrame {
             sb.append(c);
         }
         txt_output2.setText(sb.toString());
+        JOptionPane.showMessageDialog(null, "Pesan berhasil di Terima");
+
     }//GEN-LAST:event_btn_outputActionPerformed
 
     private void txt_pesanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pesanActionPerformed
@@ -922,60 +948,71 @@ public class Visualisasi extends javax.swing.JFrame {
     private void btn_adcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_adcActionPerformed
         String pesan = txt_pesan.getText();
         String result = convertStringToBinary(pesan);
+        
+        if (txt_pesan.getText().length() < 1) {
+            JOptionPane.showMessageDialog(null, "pesan tidak boleh kososng");
+        }else{
+             
+            //insert pesan
+            try {
+                String query = "insert into pesan (pesan) values ('"+txt_pesan.getText()+"')";
+                PreparedStatement ps = db.koneksidb().prepareStatement(query);
+                ps.execute();
 
-        //insert pesan
-        try {
-            String query = "insert into pesan (pesan) values ('"+txt_pesan.getText()+"')";
-            PreparedStatement ps = db.koneksidb().prepareStatement(query);
-            ps.execute();
+                //set biner
+                txt_adc.setText(prettyBinary(result, 8, " "));
 
-            //set biner
-            txt_adc.setText(prettyBinary(result, 8, " "));
+                //find id
+                String query1 = "SELECT max(pesan.id_pesan) as id_pesan FROM pesan";
+                PreparedStatement ps1 = db.koneksidb().prepareStatement(query1);
+                ResultSet rs1 = ps1.executeQuery();
+                rs1.next();
+                id_pesan = rs1.getInt("id_pesan");
 
-            //find id
-            String query1 = "SELECT max(pesan.id_pesan) as id_pesan FROM pesan";
-            PreparedStatement ps1 = db.koneksidb().prepareStatement(query1);
-            ResultSet rs1 = ps1.executeQuery();
-            rs1.next();
-            id_pesan = rs1.getInt("id_pesan");
+                 //insert detile pesan pengirim
+                try {
+                    String query2 = "insert into detile_pengirim_pesan (id_pesan,id_pengirim) values ("+(id_pesan)+",1)";
+                    PreparedStatement ps2 = db.koneksidb().prepareStatement(query2);
+                    ps2.execute();
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "insert detile_pesan gagal"+e);
+                }
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "insert pesan gagal"+e);
+                //convert to biner
+                try {
+                    String query3 = "insert into biner (biner_pesan) values ('"+txt_adc.getText()+"')";
+                    PreparedStatement ps3 = db.koneksidb().prepareStatement(query3);
+                    ps3.execute();
+
+                    //id_biner
+                    String query4 = "SELECT max(biner.id_biner) as id_biner FROM biner";
+                    PreparedStatement ps4 = db.koneksidb().prepareStatement(query4);
+                    ResultSet rs4 = ps4.executeQuery();
+                    rs4.next();
+                    //find biner id
+                    id_biner = rs4.getInt("id_biner");
+                     JOptionPane.showMessageDialog(null, "Berhasil di Convert");
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "insert to biner gagal ");
+                }
+
+                //insert detile biner
+                try {
+                    String query5 = "insert into detile_biner (id_biner,id_pesan) values ("+id_biner+","+id_pesan+")";
+                    PreparedStatement ps5 = db.koneksidb().prepareStatement(query5);
+                    ps5.execute();
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "insert detile_binaey gagal"+e);
+                }
+
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "insert pesan gagal | disallow special caharacter ( ' )");
+            }
+
         }
-        //insert detile pesan pengirim
-        try {
-            String query = "insert into detile_pengirim_pesan (id_pesan,id_pengirim) values ("+(id_pesan)+",1)";
-            PreparedStatement ps = db.koneksidb().prepareStatement(query);
-            ps.execute();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "insert detile_pesan gagal"+e);
-        }
-
-        //convert to biner
-        try {
-            String query = "insert into biner (biner_pesan) values ('"+txt_adc.getText()+"')";
-            PreparedStatement ps = db.koneksidb().prepareStatement(query);
-            ps.execute();
-
-            //id_biner
-            String query1 = "SELECT max(biner.id_biner) as id_biner FROM biner";
-            PreparedStatement ps1 = db.koneksidb().prepareStatement(query1);
-            ResultSet rs1 = ps1.executeQuery();
-            rs1.next();
-            //find biner id
-            id_biner = rs1.getInt("id_biner");
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "insert to biner gagal"+e);
-        }
-
-        //insert detile biner
-        try {
-            String query = "insert into detile_biner (id_biner,id_pesan) values ("+id_biner+","+id_pesan+")";
-            PreparedStatement ps = db.koneksidb().prepareStatement(query);
-            ps.execute();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "insert detile_binaey gagal"+e);
-        }
+       
     }//GEN-LAST:event_btn_adcActionPerformed
 
     private void btn_modulasiMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_modulasiMouseEntered
@@ -988,6 +1025,7 @@ public class Visualisasi extends javax.swing.JFrame {
 
     private void btn_modulasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_modulasiActionPerformed
         jPanel3.setVisible(true);
+        JOptionPane.showMessageDialog(null, "Berhasil di Modulasi");
     }//GEN-LAST:event_btn_modulasiActionPerformed
 
     private void btn_resetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_resetMouseEntered
@@ -1026,6 +1064,21 @@ public class Visualisasi extends javax.swing.JFrame {
 
         dsb_label.setForeground(new Color(255,255,255));
     }//GEN-LAST:event_DASHBOARDMouseExited
+
+    private void txt_pesanKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_pesanKeyTyped
+        jLabel9.setText("(except: special caracter(') and max length 28 / "+txt_pesan.getText().length()+")");
+        if (txt_pesan.getText().length() >= 28 ) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_pesanKeyTyped
+
+    private void txt_pesanKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_pesanKeyPressed
+        
+    }//GEN-LAST:event_txt_pesanKeyPressed
+
+    private void txt_pesanKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_pesanKeyReleased
+        
+    }//GEN-LAST:event_txt_pesanKeyReleased
 
     /**
      * @param args the command line arguments
@@ -1198,11 +1251,7 @@ public class Visualisasi extends javax.swing.JFrame {
     private komponen.JPANEL TENTANG;
     private komponen.JPANEL VISUALISASI;
     private javax.swing.JButton btn_adc;
-    private javax.swing.JButton btn_dac;
-    private javax.swing.JButton btn_dac1;
     private javax.swing.JButton btn_dac2;
-    private javax.swing.JButton btn_demodulasi;
-    private javax.swing.JButton btn_demodulasi1;
     private javax.swing.JButton btn_demodulasi2;
     private javax.swing.JLabel btn_logout;
     private javax.swing.JButton btn_modulasi;
@@ -1210,9 +1259,6 @@ public class Visualisasi extends javax.swing.JFrame {
     private javax.swing.JButton btn_reset;
     private javax.swing.JLabel dsb_label;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -1228,25 +1274,15 @@ public class Visualisasi extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private komponen.JPANEL logo;
-    private javax.swing.JPanel panel_penerima;
-    private javax.swing.JPanel panel_penerima1;
     private javax.swing.JPanel panel_penerima2;
     private javax.swing.JPanel panel_pengirim;
     private javax.swing.JLabel tr_label;
     private javax.swing.JTextArea txt_adc;
-    private javax.swing.JTextArea txt_dac;
-    private javax.swing.JTextArea txt_dac1;
     private javax.swing.JTextArea txt_dac2;
-    private javax.swing.JTextField txt_output;
-    private javax.swing.JTextField txt_output1;
     private javax.swing.JTextField txt_output2;
     private javax.swing.JTextField txt_pesan;
     private javax.swing.JLabel vs_label;

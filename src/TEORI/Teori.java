@@ -268,7 +268,7 @@ public class Teori extends javax.swing.JFrame {
 
         btn_logout.setFont(new java.awt.Font("Poppins Medium", 0, 16)); // NOI18N
         btn_logout.setForeground(new java.awt.Color(255, 81, 81));
-        btn_logout.setText("Logout");
+        btn_logout.setText("Close App");
         btn_logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btn_logoutMouseClicked(evt);
@@ -595,7 +595,7 @@ public class Teori extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dfns2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(t3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, Short.MAX_VALUE)
+                .addComponent(t3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(adcPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
